@@ -1,4 +1,6 @@
 ﻿[
+    {
+        "Prompt": [
             "Make a haiku.",
             "______ would be woefully incomplete without ______.",
             "After months of practice with ______, I think I’m finally ready for ______.",
@@ -1422,3 +1424,5 @@
             "Your mom.",
             "Your mum."
         ]
+    }
+]
