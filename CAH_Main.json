@@ -1,6 +1,5 @@
 ﻿[
-    {
-        "Prompt": [
+    [
             "Make a haiku.",
             "______ would be woefully incomplete without ______.",
             "After months of practice with ______, I think I’m finally ready for ______.",
@@ -1423,7 +1422,8 @@
             "YOU MUST CONSTRUCT ADDITIONAL PYLONS.",
             "Your mom.",
             "Your mum."
-        ],"Response": [
+        ],
+    [
             "50,000 volts straight to the nipples.",
             "72 virgins.",
             "A bag of magic beans.",
@@ -1731,5 +1731,4 @@
             "My balls on your face.",
             "My bright pink fuckhole."
         ]
-    }
 ]
