@@ -1,1 +1,172 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Deck JSON Format Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Card Against Reality JSON Format</h1>
+    <p>This documentation describes the JSON format used to define decks of CAR. Each deck is part of a deck pack, which may contain multiple decks, each with its own set of prompt and response cards. This format allows for indefinite expansion by adding custom decks and in game customized ability.</p>
+  <p>The current version is <code>"v":1</code></p>
+  <p><code>Custom cards are not supported in-game yet, this will be available in a future release</code><p>
+    <h2>Structure</h2>
+    <p>The JSON structure is a list that starts with a metadata object and is followed by a series of deck definitions. Each deck is represented as a nested list containing metadata, prompt cards, and response cards.</p>
+
+    <h3>JSON Format</h3>
+    <pre><code>[
+    {
+        "DeckPack": true,
+        "v": &lt;version_number&gt;
+    },
+    [
+        {
+            "Name": "&lt;deck_name&gt;",
+            "Description": "&lt;deck_description&gt;",
+            "v": &lt;version_number&gt;
+        },
+        [&lt;prompt_card&gt;, ...],
+        [&lt;response_card&gt;, ...]
+    ],
+    ...
+]</code></pre>
+
+    <h3>Elements</h3>
+
+    <h4>Deck Pack Metadata</h4>
+    <ul>
+        <li><strong>DeckPack</strong>: A boolean indicating that this JSON is part of a deck pack. Always <code>true</code>.</li>
+        <li><strong>v</strong>: An integer representing the version of the deck pack.</li>
+    </ul>
+
+    <pre><code>{
+    "DeckPack": true,
+    "v": 1
+}</code></pre>
+
+    <h3>Deck Definition</h3>
+    <p>Each deck is defined by a list containing three elements: metadata, prompt cards, and response cards.</p>
+
+    <h5>Deck Metadata</h5>
+    <ul>
+        <li><strong>Name</strong>: A string specifying the name of the deck.</li>
+        <li><strong>Description</strong>: A string providing a description of the deck.</li>
+        <li><strong>v</strong>: An integer representing the version of the deck.</li>
+    </ul>
+
+    <pre><code>{
+    "Name": "Main Deck",
+    "Description": "Deck of cards",
+    "v": 1
+}</code></pre>
+
+    <h5>Prompt Cards</h5>
+    <p>An array of strings, where each string is a prompt card.</p>
+
+    <pre><code>[
+    "The President called. He needs _____________, NOW!",
+    "This election day, remember: a vote for me is a vote for _____________."
+]</code></pre>
+  
+  Card response needed is determined by the amount of blank sapce <code>_____________</code> <i>multiple response is not currently supported and will be skipped</i>
+
+    <h5>Response Cards</h5>
+    <p>An array of strings, where each string is a response card.</p>
+
+    <pre><code>[
+    "Seymour Butts.",
+    "Sharks with legs."
+]</code></pre>
+
+    <h3>Deck Example</h3>
+    <pre><code>
+    [
+        {
+            "Name": "Main Deck",
+            "Description": "Deck of cards",
+            "v": 1
+        },
+        [],
+        [
+            "Yeast.",
+            "YOU MUST CONSTRUCT ADDITIONAL PYLONS.",
+            "Your mom.",
+            "Your mum.",
+            "Your weird brother."
+        ]
+    ]
+</code></pre>
+
+    <h3>Expansion</h3>
+    <p>To add more decks, simply append additional deck definitions to the main JSON array following the same structure.</p>
+
+    <pre><code>[
+    {
+        "DeckPack": true,
+        "v": 1
+    },
+    [
+        {
+            "Name": "Main Deck",
+            "Description": "Deck of cards",
+            "v": 1
+        },
+        [],
+        [
+            "Yeast.",
+            "YOU MUST CONSTRUCT ADDITIONAL PYLONS.",
+            "Your mom.",
+            "Your mum.",
+            "Your weird brother."
+        ]
+    ],
+    [
+        {
+            "Name": "New Deck",
+            "Description": "Another set of cards",
+            "v": 1
+        },
+        [
+            "What is love?",
+            "Why do birds suddenly appear?"
+        ],
+        [
+            "Baby don't hurt me.",
+            "Every time you are near."
+        ]
+    ]
+]</code></pre>
+
+</div>
+
+</body>
+</html>
