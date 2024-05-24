@@ -2834,7 +2834,7 @@
     ],
     [
         {
-            "Name": "Red Box Expansion",
+            "Name": "Red Box",
             "Description": "300 cards combining the First, Second, and Third Expansions.",
             "v": 1
         },
@@ -3243,8 +3243,8 @@
     ],
     [
         {
-            "Name": "Blue Box Expansion",
-            "Description": NaN,
+            "Name": "Blue Box",
+            "Description": "Blue Box Expansion",
             "v": 1
         },
         [
@@ -3606,8 +3606,8 @@
     ],
     [
         {
-            "Name": "Green Box Expansion",
-            "Description": NaN,
+            "Name": "Green Box",
+            "Description": "Green Box Expansion",
             "v": 1
         },
         [
@@ -3937,8 +3937,8 @@
     ],
     [
         {
-            "Name": "Absurd Box Expansion",
-            "Description": NaN,
+            "Name": "Absurd Box",
+            "Description": "Absurd Box Expansion",
             "v": 1
         },
         [
@@ -4258,8 +4258,8 @@
     ],
     [
         {
-            "Name": "Everything Box Expansion",
-            "Description": NaN,
+            "Name": "Everything Box",
+            "Description": "Everything Box Expansion",
             "v": 1
         },
         [
@@ -4569,8 +4569,8 @@
     ],
     [
         {
-            "Name": "Hot Box Expansion",
-            "Description": NaN,
+            "Name": "Hot Box",
+            "Description": "Hot Box Expansion",
             "v": 1
         },
         [
