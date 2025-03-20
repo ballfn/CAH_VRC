@@ -1,0 +1,46 @@
+[
+    {
+        "DeckPack": true,
+        "v": 1
+    },
+    [
+        {
+            "Name": "Example Deck",
+            "Description": "Deck of cards",
+            "v": 1
+        },
+        [
+            "Prompt 1",
+            "Prompt 2",
+            "Prompt 3",
+            "Prompt 4",
+            "Prompt 5",
+            "Prompt 6",
+            "Prompt 7",
+            "Prompt 8",
+            "Prompt 9",
+            "Prompt 10"
+        ],
+        [
+            "Response 1",
+            "Response 2",
+            "Response 3",
+            "Response 4",
+            "Response 5",
+            "Response 6",
+            "Response 7",
+            "Response 8",
+            "Response 9",
+            "Response 10",
+            "Response 11",
+            "Response 12",
+            "Response 13",
+            "Response 14",
+            "Response 15",
+            "Response 16",
+            "Response 17",
+            "Response 18",
+            "Response 19"
+        ]
+    ]
+]
